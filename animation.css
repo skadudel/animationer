@@ -10,12 +10,13 @@ body{
     margin: 0 auto;
 }
 
+/* kod för kub i övre vänstra hörnet till nedre högra hörnet och på vägen blir den till en cirkel och större men sedan går tillbaks till hur den var innan */
 .cube{
     width: 200px;
     height: 200px;
     background-color: aquamarine;
     position: absolute;
-    animation: move-cube 10s ease infinite;
+    animation: move-cube 9s ease infinite;
 }
 
 @keyframes move-cube{
@@ -42,35 +43,38 @@ body{
     }
 }
 
+/* kod för cirkel i övre högra hörnet till nedre vänstra hörnet och på vägen blir den till en kub och mindre men sedan går tillbaks till hur den var innan */ 
 .circle{
     width: 200px;
     height: 200px;
-    background-color: aqua;
+    background-color: rgb(253,130,43);
     position: absolute;
-    animation: move-circle 10s ease infinite;
+    animation: move-circle 9s ease infinite;
     border-radius: 50%;
 }
 
 @keyframes move-circle{
     0%{
-        top: 0;
-        left: 550px;
-        background-color: aqua;
+        top: 50px;
+        left: 500px;
+        background-color: rgb(253, 130, 43);
         border-radius: 50%;
-    }
-
-    50%{
-        top: 500px;
-        left: 50px;
-        background-color: aquamarine;
-        border-radius: 0;
         transform: scale(150%);
     }
 
+    50%{
+        top: 550px;
+        left: 0;
+        background-color: rgb(255,0,0);
+        border-radius: 0;
+        transform: scale(100%);
+    }
+
     100%{
-        top: 0;
-        left: 550px;
-        background-color: aqua;
+        top: 50px;
+        left: 500px;
+        background-color: rgb(253, 130, 43);
         border-radius: 50%;
+          transform: scale(150%);
     }
 }
